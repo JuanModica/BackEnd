@@ -1,5 +1,6 @@
 package com.portfolioargpr.jcm.Service;
 
+
 import com.portfolioargpr.jcm.Exception.PersonaNotFoundException;
 import com.portfolioargpr.jcm.Models.Persona;
 import com.portfolioargpr.jcm.Repository.PersonaRepository;
@@ -30,4 +31,5 @@ public class PersonaService {
         return (Persona) personaRepository.findById(id).orElseThrow(() ->new PersonaNotFoundException("Persona no encontrada"));
     }
 }
+
 

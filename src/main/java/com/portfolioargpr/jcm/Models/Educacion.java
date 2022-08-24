@@ -16,16 +16,20 @@ public class Educacion implements Serializable {
     private Long idEdu;
     private String nombreEdu;
     private int fechaEdu;
+    private String direccionEdu;
+    private Long contactoEdu;
     private String descEdu;
     private String estadoEdu;
 
     public Educacion() {
     }
 
-    public Educacion(Long idEdu, String nombreEdu, int fechaEdu, String descEdu, String estadoEdu) {
+    public Educacion(Long idEdu, String nombreEdu, int fechaEdu, String direccionEdu, Long contactoEdu, String descEdu, String estadoEdu) {
         this.idEdu = idEdu;
         this.nombreEdu = nombreEdu;
         this.fechaEdu = fechaEdu;
+        this.direccionEdu = direccionEdu;
+        this.contactoEdu = contactoEdu;
         this.descEdu = descEdu;
         this.estadoEdu = estadoEdu;
     }
@@ -52,6 +56,22 @@ public class Educacion implements Serializable {
 
     public void setFechaEdu(int fechaEdu) {
         this.fechaEdu = fechaEdu;
+    }
+
+    public String getDireccionEdu() {
+        return direccionEdu;
+    }
+
+    public void setDireccionEdu(String direccionEdu) {
+        this.direccionEdu = direccionEdu;
+    }
+
+    public Long getContactoEdu() {
+        return contactoEdu;
+    }
+
+    public void setContactoEdu(Long contactoEdu) {
+        this.contactoEdu = contactoEdu;
     }
 
     public String getDescEdu() {

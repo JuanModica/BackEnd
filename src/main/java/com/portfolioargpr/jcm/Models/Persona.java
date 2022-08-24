@@ -25,8 +25,18 @@ public class Persona implements Serializable {
     private String apellidoPersona;
     @Column(name = "tituloPersona", nullable = false)
     private String tituloPersona;
-    @Column(name = "descPersona", nullable = false)
-    private String descPersona;
+    @Column(name = "edadPersona", nullable = false)
+    private String edadPersona;
+    @Column(name = "dniPersona", nullable = false)
+    private Long dniPersona;
+    @Column(name = "direccionPersona", nullable = false)
+    private String direccionPersona;
+    @Column(name = "ubicacionPersona", nullable = false)
+    private String ubicacionPersona;
+    @Column(name = "contactoPersona", nullable = false)
+    private Long contactoPersona;
+    @Column(name = "emailPersona", nullable = false)
+    private String emailPersona;
     @Column(name = "perfilImgPersona", nullable = false)
     private String perfilImgPersona;
     @Column(name = "bannerImgPersona", nullable = false)
@@ -47,12 +57,19 @@ public class Persona implements Serializable {
     public Persona() {
     }
 
-    public Persona(Long idPersona, String nombrePersona, String apellidoPersona, String tituloPersona, String descPersona, String perfilImgPersona, String bannerImgPersona) {
+    public Persona(Long idPersona, String nombrePersona, String apellidoPersona, String tituloPersona,
+            String edadPersona, Long dniPersona, String direccionPersona, String ubicacionPersona, Long contactoPersona,
+            String emailPersona, String perfilImgPersona, String bannerImgPersona) {
         this.idPersona = idPersona;
         this.nombrePersona = nombrePersona;
         this.apellidoPersona = apellidoPersona;
         this.tituloPersona = tituloPersona;
-        this.descPersona = descPersona;
+        this.edadPersona = edadPersona;
+        this.dniPersona = dniPersona;
+        this.direccionPersona = direccionPersona;
+        this.ubicacionPersona = ubicacionPersona;
+        this.contactoPersona = contactoPersona;
+        this.emailPersona = emailPersona;
         this.perfilImgPersona = perfilImgPersona;
         this.bannerImgPersona = bannerImgPersona;
     }
@@ -89,12 +106,52 @@ public class Persona implements Serializable {
         this.tituloPersona = tituloPersona;
     }
 
-    public String getDescPersona() {
-        return descPersona;
+    public String getEdadPersona() {
+        return edadPersona;
     }
 
-    public void setDescPersona(String descPersona) {
-        this.descPersona = descPersona;
+    public void setEdadPersona(String edadPersona) {
+        this.edadPersona = edadPersona;
+    }
+
+    public Long getDniPersona() {
+        return dniPersona;
+    }
+
+    public void setDniPersona(Long dniPersona) {
+        this.dniPersona = dniPersona;
+    }
+
+    public String getDireccionPersona() {
+        return direccionPersona;
+    }
+
+    public void setDireccionPersona(String direccionPersona) {
+        this.direccionPersona = direccionPersona;
+    }
+
+    public String getUbicacionPersona() {
+        return ubicacionPersona;
+    }
+
+    public void setUbicacionPersona(String ubicacionPersona) {
+        this.ubicacionPersona = ubicacionPersona;
+    }
+
+    public Long getContactoPersona() {
+        return contactoPersona;
+    }
+
+    public void setContactoPersona(Long contactoPersona) {
+        this.contactoPersona = contactoPersona;
+    }
+
+    public String getEmailPersona() {
+        return emailPersona;
+    }
+
+    public void setEmailPersona(String emailPersona) {
+        this.emailPersona = emailPersona;
     }
 
     public String getPerfilImgPersona() {

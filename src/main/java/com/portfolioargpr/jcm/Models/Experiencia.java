@@ -16,16 +16,22 @@ public class Experiencia implements Serializable {
     private Long idExp;
     private String nombreExp;
     private int fechaExp;
+    private String direccionExp;
+    private String ubicacionExp;
+    private Long contactoExp;
     private String descExp;
     private String puestoExp;
 
     public Experiencia() {
     }
 
-    public Experiencia(Long idExp, String nombreExp, int fechaExp, String descExp, String puestoExp) {
+    public Experiencia(Long idExp, String nombreExp, int fechaExp, String direccionExp, String ubicacionExp, Long contactoExp, String descExp, String puestoExp) {
         this.idExp = idExp;
         this.nombreExp = nombreExp;
         this.fechaExp = fechaExp;
+        this.direccionExp = direccionExp;
+        this.ubicacionExp = ubicacionExp;
+        this.contactoExp = contactoExp;
         this.descExp = descExp;
         this.puestoExp = puestoExp;
     }
@@ -52,6 +58,30 @@ public class Experiencia implements Serializable {
 
     public void setFechaExp(int fechaExp) {
         this.fechaExp = fechaExp;
+    }
+
+    public String getDireccionExp() {
+        return direccionExp;
+    }
+
+    public void setDireccionExp(String direccionExp) {
+        this.direccionExp = direccionExp;
+    }
+
+    public String getUbicacionExp() {
+        return ubicacionExp;
+    }
+
+    public void setUbicacionExp(String ubicacionExp) {
+        this.ubicacionExp = ubicacionExp;
+    }
+
+    public Long getContactoExp() {
+        return contactoExp;
+    }
+
+    public void setContactoExp(Long contactoExp) {
+        this.contactoExp = contactoExp;
     }
 
     public String getDescExp() {
