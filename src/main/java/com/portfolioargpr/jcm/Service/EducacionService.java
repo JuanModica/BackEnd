@@ -4,6 +4,7 @@ import com.portfolioargpr.jcm.Models.Educacion;
 import com.portfolioargpr.jcm.Repository.EducacionRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,7 +25,7 @@ public class EducacionService {
     public List<Educacion> findEducacion(){
         return educacionRepository.findAll();
     }
-    
+
     public Educacion updateEducacion(Educacion educacion){
         return educacionRepository.save(educacion);
     }

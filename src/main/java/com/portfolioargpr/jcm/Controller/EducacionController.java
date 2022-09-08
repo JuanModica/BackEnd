@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/educacion")
 public class EducacionController {
+
     @Autowired
     private final EducacionService educacionService;
 
@@ -29,29 +29,30 @@ public class EducacionController {
         this.educacionService = educacionService;
     }
 
+
     @GetMapping("/all")
-    public ResponseEntity<List<Educacion>> getEducacion(){
+    public ResponseEntity<List<Educacion>> getEducacion() {
         List<Educacion> educaciones = educacionService.findEducacion();
         return new ResponseEntity<>(educaciones, HttpStatus.OK);
     }
-    
+
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/add")
-    public ResponseEntity<Educacion> addEducacion(@RequestBody Educacion educacion){
+    public ResponseEntity<Educacion> addEducacion(@RequestBody Educacion educacion) {
         Educacion newEducacion = educacionService.addEducacion(educacion);
         return new ResponseEntity<>(newEducacion, HttpStatus.CREATED);
     }
-    
+
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/update")
-    public ResponseEntity<Educacion> updateEducacion(@RequestBody Educacion educacion){
+    public ResponseEntity<Educacion> updateEducacion(@RequestBody Educacion educacion) {
         Educacion updateEducacion = educacionService.updateEducacion(educacion);
         return new ResponseEntity<>(updateEducacion, HttpStatus.OK);
     }
-    
+
     @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> deleteEducacion(@PathVariable("id") Long id){
+    public ResponseEntity<?> deleteEducacion(@PathVariable("id") Long id) {
         educacionService.deleteEducacion(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }

@@ -7,10 +7,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name = "experiencia")
 public class Experiencia implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idExp;
@@ -99,5 +99,5 @@ public class Experiencia implements Serializable {
     public void setPuestoExp(String puestoExp) {
         this.puestoExp = puestoExp;
     }
-    
+
 }
